@@ -1,0 +1,15 @@
+{
+  "name": "block youtube recommendations",
+  "version": "0.1",
+  "manifest_version": 3,
+  "action": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*"
+      ],
+      "run_at": "document_start",
+      "js": ["content.js"]
+    }
+  ]
+}

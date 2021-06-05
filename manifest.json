@@ -9,7 +9,7 @@
         "*://www.youtube.com/*"
       ],
       "run_at": "document_start",
-      "js": ["content.js"]
+      "css": ["hideThem.css"]
     }
   ]
 }

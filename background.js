@@ -1,24 +1,12 @@
-/* chrome.tabs.onUpdated.addListener(async function (tabId, changeInfo, tab) {
-    if (changeInfo.status == 'complete') {
-        // let [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
-        chrome.scripting.executeScript({
-            
-            target: { tabId },
-            function: setPageBackgroundColor,
-        })
-
-    }
-})
-
-function setPageBackgroundColor() {
-    document.body.style.backgroundColor = "green"
-} */
-
-const default_recommendations = true
-const default_comments = false
+const defaults = {
+    "hide-recommendations": true,
+    "hide-comments": false,
+    "hide-liveChat": false,
+}
 
 chrome.storage.sync.get(null, (settingsObj) => {
-    settingsObj["hide-recommendations"] = settingsObj["hide-recommendations"] || default_recommendations
-    settingsObj["hide-comments"] = settingsObj["hide-comments"] || default_comments
+    settingsObj["hide-recommendations"] = settingsObj["hide-recommendations"] || defaults["hide-recommendations"]
+    settingsObj["hide-comments"] = settingsObj["hide-comments"] || defaults["hide-comments"]
+    settingsObj["hide-liveChat"] = settingsObj["hide-liveChat"] || defaults["hide-liveChat"]
     chrome.storage.sync.set(settingsObj)
 })

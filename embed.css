@@ -1,0 +1,3 @@
+html[hide-recommendations=true] .ytp-pause-overlay {
+    display: none !important
+}

@@ -1,3 +1,3 @@
-html[hide-recommendations=true] .ytp-pause-overlay {
+html[hide-recommendations=true] .ytp-pause-overlay, html[hide-recommendations=true] .videowall-endscreen {
     display: none !important
 }

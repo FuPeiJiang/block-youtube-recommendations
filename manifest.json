@@ -27,5 +27,15 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["storage", "activeTab", "scripting", "tabs"]
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "declarativeNetRequest"],
+  "declarative_net_request": {
+    "rule_resources": [{
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+    }]
+  },
+  "host_permissions": [
+    "https://www.youtube.com/shorts/*"
+  ]
 }
